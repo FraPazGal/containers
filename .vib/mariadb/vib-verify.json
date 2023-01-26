@@ -3,7 +3,8 @@
     "resources": {
       "url": "{SHA_ARCHIVE}",
       "path": "{VIB_ENV_PATH}"
-    }
+    },
+    "runtime_parameters": "cG9ydHM6CiAgLSBwb3J0OiA4MAogICAgbmFtZTogc2VydmljZQogICAgdGFyZ2V0UG9ydDogMzMwNg=="
   },
   "phases": {
     "package": {
@@ -29,6 +30,13 @@
     },
     "verify": {
       "actions": [
+        {
+          "action_id": "health-check",
+          "params": {
+            "app_protocol": "GENERIC",
+            "endpoint": "lb-mariadb-service"
+          }
+        },
         {
           "action_id": "trivy",
           "params": {
