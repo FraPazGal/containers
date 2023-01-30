@@ -27,5 +27,5 @@ command:
     stdout:
     - {{ .Env.APP_VERSION }}
   check-components:
-    exec: . scripts/check-components.sh
+    exec: ./scripts/check-components.sh
     exit-status: 0
