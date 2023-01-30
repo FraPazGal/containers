@@ -13,7 +13,7 @@ file:
   /opt/bitnami/{{ .Vars.app_name }}/plugin/auth_pam.so:
     exists: true
     filetype: file
-    mode: "0755"
+    mode: "0644"
   {{ range $directory := .Vars.directories }}
   {{ $directory }}:
     exists: true
