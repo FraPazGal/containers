@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 components=( $(cat /opt/bitnami/.bitnami_components.json | grep ": {" | cut -d ':' -f 1 | tr -d '"') )
 
