@@ -31,10 +31,15 @@
     "verify": {
       "actions": [
         {
-          "action_id": "health-check",
+          "action_id": "goss",
           "params": {
-            "app_protocol": "GENERIC",
-            "endpoint": "lb-mariadb-service"
+            "resources": {
+              "path": "/.vib/mariadb/goss"
+            },
+            "vars_file": "vars.yaml",
+            "remote": {
+              "workload": "deploy-mariadb"
+            }
           }
         },
         {

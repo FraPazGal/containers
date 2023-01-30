@@ -1,0 +1,31 @@
+file:
+  /opt/bitnami/{{ .Vars.app_name }}:
+    filetype: directory
+    exists: true
+  /opt/bitnami/{{ .Vars.app_name }}/conf/my.cnf:
+    exists: true
+    filetype: file
+    contains:
+      - socket=/opt/bitnami/mariadb/tmp/mysql.sock
+  /opt/bitnami/mariadb/lib/plugin:
+    exists: true
+    filetype: symlink
+  /opt/bitnami/{{ .Vars.app_name }}/plugin/auth_pam.so:
+    exists: true
+    filetype: file
+    mode: "0755"
+  {{ range $directory := .Vars.directories }}
+  {{ $directory }}:
+    exists: true
+    filetype: directory
+    mode: "0775"
+  {{ end }}
+command:
+  check-app-version:
+    exec: {{ .Vars.bin_name }} --version
+    exit-status: 0
+    stdout:
+    - {{ .Env.APP_VERSION }}
+  check-components:
+    exec: . scripts/check-components.sh
+    exit-status: 0

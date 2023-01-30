@@ -1,0 +1,9 @@
+app_name: mariadb
+bin_name: mysql
+directories:
+  - /bitnami/mariadb
+  - /bitnami/mariadb/data
+  - /opt/bitnami/mariadb/tmp
+  - /opt/bitnami/mariadb/logs
+  - /opt/bitnami/mariadb/conf
+  - /opt/bitnami/mariadb/conf/bitnami
