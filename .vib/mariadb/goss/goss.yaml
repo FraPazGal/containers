@@ -1,7 +1,9 @@
+gossfile:
+  parts/check-components.yaml: {}
+  parts/check-app-version.yaml: {}
+  parts/check-app-directory.yaml: {}
+
 file:
-  /opt/bitnami/{{ .Vars.app_name }}:
-    filetype: directory
-    exists: true
   /opt/bitnami/{{ .Vars.app_name }}/conf/my.cnf:
     exists: true
     filetype: file
@@ -14,18 +16,3 @@ file:
     exists: true
     filetype: file
     mode: "0644"
-  {{ range $directory := .Vars.directories }}
-  {{ $directory }}:
-    exists: true
-    filetype: directory
-    mode: "0775"
-  {{ end }}
-command:
-  check-app-version:
-    exec: {{ .Vars.bin_name }} --version
-    exit-status: 0
-    stdout:
-    - {{ .Env.APP_VERSION }}
-  check-components:
-    exec: ./scripts/check-components.sh
-    exit-status: 0

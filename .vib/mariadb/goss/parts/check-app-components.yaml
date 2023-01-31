@@ -1,0 +1,4 @@
+command:
+  check-components:
+    exec: ./scripts/check-components.sh
+    exit-status: 0
