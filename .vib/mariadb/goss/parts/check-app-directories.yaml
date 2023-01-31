@@ -6,5 +6,5 @@ file:
   {{ $directory }}:
     exists: true
     filetype: directory
-    mode: {{ .Vars.filesystem.mode }}
+    mode: "0755"
   {{ end }}
