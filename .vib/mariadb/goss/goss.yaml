@@ -1,21 +1,12 @@
 gossfile:
-  /tmp/vib-common/goss/parts/check-components.yaml: {}
-  /tmp/vib-common/goss/parts/check-app-version.yaml: {}
-  /tmp/vib-common/goss/parts/check-app-directories.yaml: {}
-
-file:
-  # Checks there is a template already loaded as a config file
-  /opt/bitnami/{{ .Vars.app_name }}/conf/my.cnf:
-    exists: true
-    filetype: file
-    contains:
-      - socket=/opt/bitnami/mariadb/tmp/mysql.sock
-  # Checks the postunpack phase roperly creates the plugin's symlink
-  /opt/bitnami/mariadb/lib/plugin:
-    exists: true
-    filetype: symlink
-  # Check the plugins added at compilation time are available
-  /opt/bitnami/{{ .Vars.app_name }}/plugin/auth_pam.so:
-    exists: true
-    filetype: file
-    mode: "0644"
+  # Goss tests exclusive to the current container
+  ../../mariadb/goss/templates/mariadb.yaml: {}
+  # Load scripts from .vib/common/goss/templates
+  ../../common/goss/templates/check-sed-in-place.yaml: {}
+  ../../common/goss/templates/check-broken-symlinks.yaml: {}
+  ../../common/goss/templates/check-ca-certs.yaml: {}
+  ../../common/goss/templates/check-added-openssl.yaml: {}
+  ../../common/goss/templates/check-executables.yaml: {}
+  ../../common/goss/templates/check-components.yaml: {}
+  ../../common/goss/templates/check-app-version.yaml: {}
+  ../../common/goss/templates/check-app-directories.yaml: {}
