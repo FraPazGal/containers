@@ -1,7 +1,7 @@
 gossfile:
   /tmp/vib-common/goss/parts/check-components.yaml: {}
   /tmp/vib-common/goss/parts/check-app-version.yaml: {}
-  # /tmp/vib-common/goss/parts/check-app-directories.yaml: {}
+  /tmp/vib-common/goss/parts/check-app-directories.yaml: {}
 
 file:
   # Checks there is a template already loaded as a config file
