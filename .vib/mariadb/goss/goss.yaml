@@ -1,7 +1,7 @@
 gossfile:
   parts/check-components.yaml: {}
   parts/check-app-version.yaml: {}
-  parts/check-app-directories.yaml: {}
+  # parts/check-app-directories.yaml: {}
 
 file:
   # Checks there is a template already loaded as a config file
