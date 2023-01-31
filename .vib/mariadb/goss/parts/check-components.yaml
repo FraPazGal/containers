@@ -1,4 +1,4 @@
 command:
   check-components:
-    exec: ../../vib-common/goss/scripts/check-components.sh
+    exec: ./scripts/check-components.sh
     exit-status: 0
