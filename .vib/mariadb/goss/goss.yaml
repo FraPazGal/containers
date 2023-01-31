@@ -1,17 +1,20 @@
 gossfile:
   parts/check-components.yaml: {}
   parts/check-app-version.yaml: {}
-  parts/check-app-directory.yaml: {}
+  parts/check-app-directories.yaml: {}
 
 file:
+  # Checks there is a template already loaded as a config file
   /opt/bitnami/{{ .Vars.app_name }}/conf/my.cnf:
     exists: true
     filetype: file
     contains:
       - socket=/opt/bitnami/mariadb/tmp/mysql.sock
+  # Checks the postunpack phase roperly creates the plugin's symlink
   /opt/bitnami/mariadb/lib/plugin:
     exists: true
     filetype: symlink
+  # Check the plugins added at compilation time are available
   /opt/bitnami/{{ .Vars.app_name }}/plugin/auth_pam.so:
     exists: true
     filetype: file
