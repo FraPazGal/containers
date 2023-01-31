@@ -8,4 +8,4 @@ filesystem:
     - /opt/bitnami/mariadb/logs
     - /opt/bitnami/mariadb/conf
     - /opt/bitnami/mariadb/conf/bitnami
-  mode: 0755
+  mode: "0666"

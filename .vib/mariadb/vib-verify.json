@@ -34,9 +34,10 @@
           "action_id": "goss",
           "params": {
             "resources": {
-              "path": "/.vib/mariadb/goss"
+              "path": "/.vib"
             },
-            "vars_file": "vars.yaml",
+            "tests_file": "mariadb/goss/goss.yaml",
+            "vars_file": "mariadb/goss/vars.yaml",
             "remote": {
               "workload": "deploy-mariadb"
             }

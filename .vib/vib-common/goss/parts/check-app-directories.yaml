@@ -2,10 +2,10 @@ file:
   /opt/bitnami/{{ .Vars.app_name }}:
     filetype: directory
     exists: true
-  {{- $mode :=  printf "%s" .Vars.filesystem.mode }}
+  # {{- $mode := "%s" .Vars.filesystem.mode }}
   {{ range $directory := .Vars.filesystem.directories }}
   {{ $directory }}:
     exists: true
     filetype: directory
-    mode: {{ $mode }}
+    mode: "0666"
   {{ end }}
