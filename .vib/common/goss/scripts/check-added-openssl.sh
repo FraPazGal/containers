@@ -1,6 +1,6 @@
 #!/bin/bash
 
-openssl_bin="/opt/bitnami/common/bin/openssl"
+openssl_bin="$BITNAMI_ROOT_DIR/common/bin/openssl"
 openssl_version="1.0.1u"
 
 if [[ -f $openssl_bin ]]; then
