@@ -1,4 +1,4 @@
 command:
   check-broken-symlinks:
-    exec: if [ $(find {{ .Env.BITNAMI_ROOT_DIR }} -xtype l | wc -l) -gt 0 ]; then exit 1; fi
+    exec: if [ $(find {{ .Vars.root_dir }} -xtype l | wc -l) -gt 0 ]; then exit 1; fi
     exit-status: 0

@@ -1,16 +1,16 @@
 file:
   # Checks there is a template already loaded as a config file
-  {{ .Env.BITNAMI_ROOT_DIR }}/{{ .Env.BITNAMI_APP_NAME }}/conf/my.cnf:
+  {{ .Vars.root_dir }}/{{ .Env.BITNAMI_APP_NAME }}/conf/my.cnf:
     exists: true
     filetype: file
     contains:
-      - socket={{ .Env.BITNAMI_ROOT_DIR }}/{{ .Env.BITNAMI_APP_NAME }}/tmp/mysql.sock
+      - socket={{ .Vars.root_dir }}/{{ .Env.BITNAMI_APP_NAME }}/tmp/mysql.sock
   # Checks the postunpack phase roperly creates the plugin's symlink
-  {{ .Env.BITNAMI_ROOT_DIR }}/{{ .Env.BITNAMI_APP_NAME }}/lib/plugin:
+  {{ .Vars.root_dir }}/{{ .Env.BITNAMI_APP_NAME }}/lib/plugin:
     exists: true
     filetype: symlink
   # Check the plugins added at compilation time are available
-  {{ .Env.BITNAMI_ROOT_DIR }}/{{ .Env.BITNAMI_APP_NAME }}/plugin/auth_pam.so:
+  {{ .Vars.root_dir }}/{{ .Env.BITNAMI_APP_NAME }}/plugin/auth_pam.so:
     exists: true
     filetype: file
     mode: "0644"

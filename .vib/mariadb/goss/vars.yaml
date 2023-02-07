@@ -1,5 +1,7 @@
-app_name: mariadb
 bin_name: mysql
+components:
+  directories:
+    - /opt/bitnami/mariadb/bin/mysql
 filesystem:
   directories:
     - /bitnami/mariadb
@@ -9,3 +11,4 @@ filesystem:
     - /opt/bitnami/mariadb/conf
     - /opt/bitnami/mariadb/conf/bitnami
   mode: "0775"
+root_dir: /opt/bitnami

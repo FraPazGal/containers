@@ -1,7 +1,7 @@
 file:
   # Checks root app directory as well as directories
   # with permission changed in the postunpack stage
-  {{ .Env.BITNAMI_ROOT_DIR }}/{{ .Vars.app_name }}:
+  {{ .Vars.root_dir }}/{{ .Env.BITNAMI_APP_NAME }}:
     filetype: directory
     exists: true
   {{- $mode := .Vars.filesystem.mode }}
