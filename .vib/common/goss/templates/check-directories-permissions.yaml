@@ -5,10 +5,12 @@
 #   - .Vars.filesystem.mode (String)
 ########################
 file:
-  {{- $mode := .Vars.filesystem.mode }}
-  {{ range $directory := .Vars.filesystem.directories }}
+  {{ range .Vars.filesystem }}
+  {{ $mode := .mode }}
+  {{ range $directory := .directories }}
   {{ $directory }}:
     exists: true
     filetype: directory
     mode: "{{ $mode }}"
+  {{ end }}
   {{ end }}
