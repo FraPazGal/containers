@@ -1,0 +1,11 @@
+########################
+# Checks component files exist
+# Needed vars:
+#   - .Vars.components.files (Array)
+########################
+file:
+  {{ range $file := .Vars.components.files }}
+  {{ $file }}:
+    exists: true
+    filetype: file
+  {{ end }}

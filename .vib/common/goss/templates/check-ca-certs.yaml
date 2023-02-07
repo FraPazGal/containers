@@ -1,5 +1,7 @@
-# Check the ca-certificates package exists
-# and work with an HTTPS URL
+########################
+# Checks the ca-certificates package exists
+# and works with an HTTPS URL
+########################
 package:
   ca-certificates:
     installed: true

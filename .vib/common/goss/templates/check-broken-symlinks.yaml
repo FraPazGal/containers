@@ -1,3 +1,8 @@
+########################
+# Checks there is no broken symlinks in the components folders
+# Needed vars:
+#   - .Vars.root_dir (String)
+########################
 command:
   check-broken-symlinks:
     exec: if [ $(find {{ .Vars.root_dir }} -xtype l | wc -l) -gt 0 ]; then exit 1; fi
