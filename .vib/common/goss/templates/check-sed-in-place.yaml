@@ -1,5 +1,5 @@
 ########################
-# Checks components' scripts do not have calls
+# Checks components scripts do not have calls
 # to sed commands with the in-place argument
 # Needed vars:
 #   - .Vars.root_dir

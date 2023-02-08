@@ -5,7 +5,7 @@ file:
     filetype: file
     contains:
       - socket={{ .Vars.root_dir }}/{{ .Env.BITNAMI_APP_NAME }}/tmp/mysql.sock
-  # Checks the postunpack phase roperly creates the plugin's symlink
+  # Checks the postunpack phase properly creates the plugin's symlink
   {{ .Vars.root_dir }}/{{ .Env.BITNAMI_APP_NAME }}/lib/plugin:
     exists: true
     filetype: symlink

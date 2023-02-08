@@ -1,5 +1,5 @@
 ########################
-# Checks there is no broken symlinks in the components folders
+# Checks there are no broken symlinks in the components folders
 # Needed vars:
 #   - .Vars.root_dir (String)
 ########################

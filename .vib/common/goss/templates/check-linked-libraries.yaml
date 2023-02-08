@@ -1,5 +1,5 @@
 ########################
-# Check components' executables have no missing linked libraries
+# Check components executables have no missing linked libraries
 # Needed vars:
 #   - .Vars.root_dir
 ########################

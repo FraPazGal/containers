@@ -1,5 +1,5 @@
 ########################
-# Checks componnets binaries are added to the $PATH
+# Checks components binaries are added to the $PATH
 # Needed vars:
 #   - .Vars.components.binaries (Array)
 ########################

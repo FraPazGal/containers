@@ -1,5 +1,5 @@
 ########################
-# Checks component files exist
+# Checks components files exist
 # Needed vars:
 #   - .Vars.components.files (Array)
 ########################
