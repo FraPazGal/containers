@@ -1,10 +1,7 @@
 ########################
-# Checks the ca-certificates package exists
-# and works with an HTTPS URL
+# Checks the ca-certificates package
+# is installed accesing an HTTPS URL
 ########################
-package:
-  ca-certificates:
-    installed: true
 http:
   https://www.bitnami.com:
     status: 200
