@@ -12,6 +12,6 @@ command:
   check-installed-runtimes:
     exec: {{ .Vars.version.bin_name }} {{ .Vars.version.flag }}
     stdout:
-      - AspNetCore.App {{ .Env.APP_VERSION }}
-      - NETCore.App {{ .Env.APP_VERSION }}
+      - AspNetCore.App
+      - NETCore.App
     exit-status: 0
