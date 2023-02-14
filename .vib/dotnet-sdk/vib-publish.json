@@ -39,10 +39,10 @@
             "resources": {
               "path": "/.vib"
             },
-            "tests_file": "dotnet/goss/goss.yaml",
-            "vars_file": "dotnet/goss/vars.yaml",
+            "tests_file": "dotnet-sdk/goss/goss.yaml",
+            "vars_file": "dotnet-sdk/goss/vars.yaml",
             "remote": {
-              "workload": "deploy-dotnet"
+              "workload": "deploy-dotnet-sdk"
             }
           }
         },
