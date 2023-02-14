@@ -6,7 +6,7 @@ file:
 command:
   check-bin-caps:
     exec: getcap {{ .Vars.root_dir }}/aspnet-core/bin/dotnet
-    stdout: 
+    stdout:
       - {{ .Vars.binary.capabilities }}
     exit-status: 0
   check-installed-runtimes:
