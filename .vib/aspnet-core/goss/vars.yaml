@@ -2,7 +2,7 @@ components:
   binaries:
     - dotnet
 filesystem:
-  - mode: "0777"
+  - mode: "0775"
     directories:
       - /app
   - mode: "0755"
