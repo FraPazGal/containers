@@ -3,6 +3,7 @@ file:
   /lib64/libz.so:
     exists: true
     filetype: symlink
+    linked-to: /usr/lib/libz.so.1
 command:
   check-bin-caps:
     exec: getcap {{ .Vars.root_dir }}/aspnet-core/bin/dotnet

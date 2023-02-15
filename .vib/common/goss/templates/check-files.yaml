@@ -1,0 +1,20 @@
+########################
+# Checks files exist,
+# optionally checking their permissions
+# Needed vars:
+#   - .Vars.files (Array)
+#   - .Vars.files.paths (Array)
+#   - .Vars.files.mode (Optional - String)
+########################
+file:
+  {{ range .Vars.files }}
+  {{ $mode := default "" .mode }}
+  {{ range $file := .paths }}
+  {{ $file }}:
+    exists: true
+    filetype: file
+    {{ if $mode }}
+    mode: "{{ $mode }}"
+    {{ end }}
+  {{ end }}
+  {{ end }}
