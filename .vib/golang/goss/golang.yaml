@@ -1,0 +1,4 @@
+command:
+  check-app-version:
+    exec: go version | grep -q $(echo $APP_VERSION | cut -d '.' -f 1,2)
+    exit-status: 0
