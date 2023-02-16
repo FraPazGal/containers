@@ -3,7 +3,7 @@ binaries:
 directories:
   - paths:
       - /app
-    mode: "0775"
+    mode: "0664"
   - paths:
       - /opt/bitnami/aspnet-core/bin/host
       - /opt/bitnami/aspnet-core/bin/shared
