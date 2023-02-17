@@ -6,4 +6,3 @@ gossfile:
   ../../common/goss/templates/check-directories.yaml: {}
   ../../common/goss/templates/check-files.yaml: {}
   ../../common/goss/templates/check-linked-libraries.yaml: {}
-  ../../common/goss/templates/check-sed-in-place.yaml: {}
