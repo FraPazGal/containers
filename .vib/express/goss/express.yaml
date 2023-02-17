@@ -1,0 +1,4 @@
+command:
+  check-modules-exists:
+    exec: ls /opt/bitnami/express/node_modules/ | wc -l
+    exit-status: 0

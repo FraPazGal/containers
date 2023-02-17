@@ -1,0 +1,14 @@
+binaries:
+  - express
+  - gosu
+  - node
+  - python
+  - wait-for-port
+directories:
+  - mode: "0775"
+    paths:
+      - /app
+root_dir: /opt/bitnami
+version:
+  bin_name: express
+  flag: --version
