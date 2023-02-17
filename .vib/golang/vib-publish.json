@@ -10,19 +10,6 @@
     "package": {
       "actions": [
         {
-          "action_id": "goss",
-          "params": {
-            "resources": {
-              "path": "/.vib"
-            },
-            "tests_file": "mariadb/goss/goss.yaml",
-            "vars_file": "mariadb/goss/vars.yaml",
-            "remote": {
-              "workload": "deploy-mariadb"
-            }
-          }
-        },
-        {
           "action_id": "container-image-package",
           "params": {
             "application": {
@@ -47,6 +34,19 @@
     },
     "verify": {
       "actions": [
+        {
+          "action_id": "goss",
+          "params": {
+            "resources": {
+              "path": "/.vib"
+            },
+            "tests_file": "mariadb/goss/goss.yaml",
+            "vars_file": "mariadb/goss/vars.yaml",
+            "remote": {
+              "workload": "deploy-mariadb"
+            }
+          }
+        },
         {
           "action_id": "trivy",
           "params": {
