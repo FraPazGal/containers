@@ -95,7 +95,7 @@ jobs:
               echo "name=${name}" >> $GITHUB_OUTPUT
 
               rolling_tags="$(yq '.rolling-tags' "${{ matrix.container }}/tags-info.yaml" -o json | jq -c)"
-              echo "rolling_tags=${rolling_tags}" >> $GITHUB_OUTPUT
+              echo "rolling_tags=$rolling_tags" >> $GITHUB_OUTPUT
 
               echo "result=ok" >> $GITHUB_OUTPUT
             fi
