@@ -93,6 +93,10 @@ jobs:
             else
               echo "tag=${tag}" >> $GITHUB_OUTPUT
               echo "name=${name}" >> $GITHUB_OUTPUT
+
+              rolling_tags="$(yq '.rolling-tags' "${{ matrix.container }}/tags-info.yaml" -o json | jq -c)"
+              echo "rolling_tags=${rolling_tags}" >> $GITHUB_OUTPUT
+
               echo "result=ok" >> $GITHUB_OUTPUT
             fi
           else
@@ -110,7 +114,7 @@ jobs:
           # Container name
           VIB_ENV_CONTAINER: ${{ steps.get-container-metadata.outputs.name  }}
           VIB_ENV_TAG: ${{ steps.get-container-metadata.outputs.tag }}
-          VIB_ENV_ROLLING_TAGS: ${{ secrets.TAGS_ARRAY }}
+          VIB_ENV_ROLLING_TAGS: "${{ toJSON(steps.get-container-metadata.outputs.rolling_tags) }}"
   verification-summary:
     # Ensure all containers passed the verification
     runs-on: ubuntu-latest
