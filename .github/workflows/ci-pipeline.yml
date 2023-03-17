@@ -114,7 +114,7 @@ jobs:
           # Container name
           VIB_ENV_CONTAINER: ${{ steps.get-container-metadata.outputs.name  }}
           VIB_ENV_TAG: ${{ steps.get-container-metadata.outputs.tag }}
-          VIB_ENV_ROLLING_TAGS: "${{ toJSON(steps.get-container-metadata.outputs.rolling_tags) }}"
+          VIB_ENV_ROLLING_TAGS: ${{ toJSON(steps.get-container-metadata.outputs.rolling_tags) }}
   verification-summary:
     # Ensure all containers passed the verification
     runs-on: ubuntu-latest
