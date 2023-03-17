@@ -42,9 +42,7 @@
           "action_id": "grype",
           "params": {
             "threshold": "CRITICAL",
-            "package_type": [
-              "OS"
-            ]
+            "package_type": {VIB_ENV_ROLLING_TAGS}
           }
         }
       ]
