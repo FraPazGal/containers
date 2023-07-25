@@ -1,7 +1,7 @@
 {
   "context": {
     "resources": {
-      "url": "{VIB_ENV_CONTAINER_URL}",
+      "url": "{SHA_ARCHIVE}",
       "path": "{VIB_ENV_PATH}"
     },
     "runtime_parameters": "Y29tbWFuZDogWyJ0YWlsIiwgIi1mIiwgIi9kZXYvbnVsbCJd"
